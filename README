@@ -1,0 +1,17 @@
+The project has:
+(*) An implementation of linked list
+(*) A makefile provided to make compilation & linking easier
+(*) A script for feeding sample data
+
+ 
+
+----------------
+Makefile Options
+----------------
+test: runs ./SampleData
+debug: runs ./city with a mem analyser
+
+----------
+DISCLAIMER
+----------
+I DO NOT OWN SOME PARTS OF THE MAKEFILE

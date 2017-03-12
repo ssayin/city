@@ -1,0 +1,40 @@
+#!/usr/bin/env expect
+
+proc city_add {license name region} {
+	expect "Decision: "
+	send "1\r"
+	expect "License: "
+	send "$license\r"
+	expect "Name: "
+	send "$name\r"
+	expect "Region: "
+	send "$region\r"
+
+	return 0
+}
+
+
+spawn ./bin/city
+
+city_add "1" "Adana" "Mediterranean"
+city_add "2" "Adiyaman" "South-Eastern"
+city_add "3" "Afyon"	"Aegean"
+city_add "4" "Agri" 	"Eastern"
+city_add "5" "Amasya"	"Black Sea"
+city_add "6" "Ankara"	"Central"
+city_add "7" "Antalya"	"Mediterranean"
+city_add "8" "Artvin"	"Black Sea"
+city_add "9" "Aydin"	"Aegean"
+city_add "10" "Balikesir" "Marmara"
+city_add "11" "Bilecik"	"Marmara"
+city_add "12" "Bingol"	"Eastern"
+city_add "13" "Bitlis"  "Eastern"
+city_add "14" "Bolu"	"Marmara"
+city_add "15" "Burdur"  "Mediterranean"
+city_add "16" "Bursa"	"Marmara"
+city_add "17" "Canakkale" "Aegean"
+city_add "18" "Cankiri" "Central"
+city_add "19" "Corum" "Central"
+city_add "20" "Denizli" "Aegean"
+
+interact
